@@ -673,8 +673,8 @@ ruuvi_status_t ble4_dis_init(void)
 
   // Read security level 1, mode 1. OPEN, i.e. anyone can read without encryption.
   // Write not allowed.
-  dis_init.dis_attr_md.read_perm.sm = 1;
-  dis_init.dis_attr_md.read_perm.lv = 1;
+//  dis_init.dis_attr_md.read_perm.sm = 1;
+//  dis_init.dis_attr_md.read_perm.lv = 1;
 
   err_code = ble_dis_init(&dis_init);
   PLATFORM_LOG_DEBUG("DIS init, status %d\r\n", err_code);
@@ -689,7 +689,7 @@ ruuvi_status_t ble4_dis_init(void)
 ruuvi_status_t ble4_dfu_init(void)
 {
 
-  ret_code_t err_code = NRF_SUCCESS;
+      ret_code_t err_code = NRF_SUCCESS;
 
       ble_dfu_buttonless_init_t dfus_init = {0};
 
